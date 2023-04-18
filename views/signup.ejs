@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    body{
+        background: rgb(98, 98, 212);
+        background-color: aqua;
+    }
+    form{
+        display: grid;
+        gap: 30px;
+    }
+    h1{
+        height: 50px;
+        width: 50%;
+        margin-left: 500px;
+    }
+    input{
+        height: 50px;
+        width: 50%;
+        margin-left: 300px;
+        border-radius: 20px;
+    }
+    button{
+        height: 30px;
+        width: 50%;
+        margin-left: 300px;
+        border-radius: 20px;
+        background-color: blueviolet
+    }
+    .error{
+        color: red;
+    }
+</style>
+    </head>
+    <body>
+        <h1><b>Signup Page</b></h1>
+          <p class="error"><%=error%></p>
+       
+        <form action="/auth/signup"  method="post">
+            <input type="text" name="email" id="email" placeholder="enter your email"/>
+            <input type="password" name="password" id="password" placeholder="enter password"/>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="confirm password"/>
+
+            <button type="submit">Signup</button>
+        </form>
+    </body>
+</html>
